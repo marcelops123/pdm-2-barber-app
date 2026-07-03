@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BarberApp</string>
+    <string name="default_admin_login">admin</string>
+    <string name="default_admin_password">admin123</string>
+    <string name="admin_hint">Conta administrador padrão: admin / admin123</string>
+    <string name="bem_vindo_usuario">Olá, %1$s</string>
+    <string name="bem_vindo_sem_perfil">Olá, %1$s\nToque em Clientes para cadastrar seu perfil.</string>
+</resources>

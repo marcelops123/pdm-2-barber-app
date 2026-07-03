@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Pdm2.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="20dp"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="0.5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/playfair_display_bold"
+                android:text="Lançamento financeiro"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Tipo" />
+
+            <Spinner
+                android:id="@+id/spinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/edtDescricao"
+                style="@style/Widget.Pdm2.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Descrição"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtValor"
+                style="@style/Widget.Pdm2.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Valor"
+                android:inputType="numberDecimal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnData"
+                style="@style/Widget.Pdm2.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Data do lançamento"
+                app:icon="@drawable/ic_today_24"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="—" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvar"
+                style="@style/Widget.Pdm2.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Salvar"
+                app:icon="@drawable/ic_save_24"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExcluir"
+                style="@style/Widget.Pdm2.Button.Outlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Excluir"
+                app:icon="@drawable/ic_delete_24"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</ScrollView>

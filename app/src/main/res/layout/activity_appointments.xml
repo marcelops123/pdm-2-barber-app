@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <include layout="@layout/include_page_header" />
+
+    <include
+        android:id="@+id/searchBar"
+        layout="@layout/include_search_bar" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Pdm2.Card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:contentPadding="0dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="horizontal">
+
+            <TableLayout
+                android:id="@+id/tableLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="320dp"
+                android:shrinkColumns="*"
+                android:stretchColumns="*" />
+        </HorizontalScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txtVazio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="Nenhum registro"
+        android:textColor="@color/text_secondary"
+        android:visibility="gone" />
+</LinearLayout>

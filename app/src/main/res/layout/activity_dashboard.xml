@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPageTitle"
+            style="@style/TextAppearance.Pdm2.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dashboard" />
+
+        <TextView
+            android:id="@+id/txtPageSubtitle"
+            style="@style/TextAppearance.Pdm2.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="Bem-vindo ao seu painel de controle" />
+
+        <include
+            android:id="@+id/kpiAgendamentos"
+            layout="@layout/item_kpi_card" />
+
+        <include
+            android:id="@+id/kpiClientes"
+            layout="@layout/item_kpi_card" />
+
+        <include
+            android:id="@+id/kpiReceita"
+            layout="@layout/item_kpi_card" />
+
+        <include
+            android:id="@+id/kpiUsuarios"
+            layout="@layout/item_kpi_card" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/playfair_display_bold"
+            android:text="Agendamentos por Mês"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Pdm2.Card"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:contentPadding="12dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartAgendamentos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
